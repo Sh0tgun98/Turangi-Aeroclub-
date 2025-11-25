@@ -26,10 +26,18 @@
       padding: 0 15px;
     }
 
+    /* Force 2x2 grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 20px;
+    }
+
+    /* Stack on small screens */
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
